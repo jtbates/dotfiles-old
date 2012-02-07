@@ -199,6 +199,9 @@ imap aa @
 " |                              Plug-ins                                     |
 " -----------------------------------------------------------------------------  
 
+" Pathogen ********************************************************************
+call pathogen#infect()
+
 " NERDTree ********************************************************************
 :noremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
