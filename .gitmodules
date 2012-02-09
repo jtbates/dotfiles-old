@@ -1,3 +1,6 @@
 [submodule "vim/bundle/vim-slime"]
 	path = vim/bundle/vim-slime
 	url = git@github.com:jpalardy/vim-slime.git
+[submodule "vim/bundle/CSApprox"]
+	path = vim/bundle/CSApprox
+	url = git@github.com:vim-scripts/CSApprox.git
