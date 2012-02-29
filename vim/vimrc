@@ -157,6 +157,13 @@ set matchpairs+=<:>
 set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
 set nofoldenable " Turn off folding 
 
+set clipboard=unnamed,unnamedplus
+"
+"DiffOrig"
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+          \ | wincmd p | diffthis
+endif
 
 " Navigation ******************************************************************
 
@@ -298,8 +305,3 @@ endif
 
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
 
-"DiffOrig"
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-          \ | wincmd p | diffthis
-endif
