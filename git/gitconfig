@@ -1,0 +1,11 @@
+[user]
+	name = JT Bates
+	email = jtbates@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = /Users/jtbates/.gitignore_global
+[alias]
+	co = checkout
