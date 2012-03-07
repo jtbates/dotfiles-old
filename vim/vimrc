@@ -3,7 +3,7 @@
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
 " | Some highlights:                                                          |
-" |   jj = <esc>  Very useful for keeping your hands on the home row          |
+" |   kj = <esc>  Very useful for keeping your hands on the home row          |
 " |   ,n = toggle NERDTree off and on                                         |
 " |                                                                           |
 " |   ,f = fuzzy find all files                                               |
@@ -21,7 +21,7 @@
 " |   enter and shift-enter = adds a new line after/before the current line   |
 " |                                                                           |
 " |   :call Tabstyle_tabs = set tab to real tabs                              |
-" |   :call Tabstyle_spaces = set tab to 2 spaces                             |
+" |   :call Tabstyle_spaces = set tab to 4 spaces                             |
 " |                                                                           |
 " | Put machine/user specific settings in ~/.vimrc.local                      |
 " -----------------------------------------------------------------------------  
@@ -29,7 +29,7 @@
 
 set nocompatible
 let mapleader = ","
-imap jj <Esc> " Professor VIM says '87% of users prefer jj over esc', jj abrams disagrees
+imap kj <Esc> 
 
 
 " Tabs ************************************************************************
@@ -53,6 +53,8 @@ function! Tabstyle_spaces()
   set shiftwidth=4
   set tabstop=4
   set expandtab
+  autocmd BufNewFile,BufRead *.lua setlocal expandtab tabstop=3 shiftwidth=3 softtabstop=3
+  autocmd BufNewFile,BufRead *.c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 endfunction
 
 call Tabstyle_spaces()
