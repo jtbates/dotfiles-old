@@ -1,0 +1,6 @@
+set passkeys+=mail.google.com:jknpox#?
+noremap <M-c> <C-v><C-c>
+inoremap <M-v> <C-v><C-v>
+
+set visualbell
+hi Bell display: none;
