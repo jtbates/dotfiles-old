@@ -1,5 +1,10 @@
 set -o vi
 
+if [ -f ~/.extra ]
+then
+	source ~/.extra
+fi
+
 if [ -f ~/.git-completion.sh ]
 then
 	source ~/.git-completion.sh
