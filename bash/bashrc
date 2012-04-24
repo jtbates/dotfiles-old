@@ -28,7 +28,7 @@ export LSCOLORS="fxexcxdxbxegedabagacad"
 
 export EDITOR="vim"
 
-alias ls="ls -G"
+alias ls="ls --color"
 alias ll="ls -l"
 alias screen="TERM=screen screen"
 
