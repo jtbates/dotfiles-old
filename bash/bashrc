@@ -1,3 +1,6 @@
+# check if shell is not interactive and exit if so
+[ -z "$PS1" ] && return
+
 set -o vi
 
 if [ -f ~/.extra ]
