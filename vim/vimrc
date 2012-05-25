@@ -211,6 +211,10 @@ imap aa @
 " Pathogen ********************************************************************
 call pathogen#infect()
 
+" VimOrganizer ****************************************************************
+au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
+au BufEnter *.org call org#SetOrgFileType()
+
 " NERDTree ********************************************************************
 :noremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw=1 " User instead of Netrw when doing an edit /foobar
