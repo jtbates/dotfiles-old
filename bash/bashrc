@@ -1,4 +1,12 @@
+# check if shell is not interactive and exit if so
+[ -z "$PS1" ] && return
+
 set -o vi
+
+if [ -f ~/.extra ]
+then
+	source ~/.extra
+fi
 
 if [ -f ~/.git-completion.sh ]
 then
@@ -23,7 +31,7 @@ export LSCOLORS="fxexcxdxbxegedabagacad"
 
 export EDITOR="vim"
 
-alias ls="ls -G"
+alias ls="ls --color"
 alias ll="ls -l"
 alias screen="TERM=screen screen"
 

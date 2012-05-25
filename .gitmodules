@@ -10,3 +10,6 @@
 [submodule "vim/bundle/VimOrganizer"]
 	path = vim/bundle/VimOrganizer
 	url = git@github.com:hsitz/VimOrganizer.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
